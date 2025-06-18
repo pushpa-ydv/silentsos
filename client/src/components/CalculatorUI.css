@@ -1,0 +1,71 @@
+/* Emergency-Themed Calculator UI */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.calculator {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff3b3b;
+  width: 300px;
+}
+
+.display {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ff3b3b;
+  border-radius: 10px;
+  background: black;
+  color: #ff3b3b;
+  animation: pulse 1s infinite alternate;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #ff3b3b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ff1c1c;
+}
+
+.del-button {
+  background: #ffd700;
+  color: black;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 10px #ff3b3b;
+  }
+  to {
+    box-shadow: 0 0 20px #ff3b3b;
+  }
+}
