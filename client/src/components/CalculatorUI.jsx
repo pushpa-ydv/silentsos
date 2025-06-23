@@ -19,7 +19,7 @@ export default function CalculatorUI() {
         formData.append("video", mediaBlob, "sos-video.webm");
 
         try {
-            await fetch("http://localhost:5000/send-alert", {
+            await fetch(`${process.env.REACT_APP_API_URL}/send-alert`, {
                 method: "POST",
                 body: formData,
 
